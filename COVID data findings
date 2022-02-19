@@ -1,0 +1,7 @@
+##Showing countries with total number of deaths
+
+SELECT MAX(cast(total_deaths as int)) AS totaldeaths, location
+FROM `orbital-craft-341820.Coviddataset.Covid`
+WHERE continent is not null 
+Group by location
+ORDER BY totaldeaths DESC
